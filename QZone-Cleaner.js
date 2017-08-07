@@ -7,7 +7,7 @@
   function clickDelete() {
     try {
       document.querySelector('.app_canvas_frame').contentDocument.querySelector('.del_btn').click();
-      setTimeout('clickYes()', delay);
+      setTimeout('clickYes();', delay);
     } catch (error) {
       console.info('预期内的错误', error);
       document.querySelector('.app_canvas_frame').contentDocument.querySelector('#pager_next_0').click();
@@ -19,7 +19,7 @@
     try {
       document.querySelector('.qz_dialog_layer_sub').click();
       console.info('已删除', count++, '条说说');
-      setTimeout('clickDelete()', delay);
+      setTimeout('clickDelete();', delay);
     } catch (error) {
       console.error('预期外的错误', error);
     }
