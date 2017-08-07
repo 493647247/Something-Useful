@@ -1,7 +1,7 @@
 'use strict';
 
 (function () {
-  var count;
+  var count = 1;
   var delay = 1000;
 
   function clickDelete() {
