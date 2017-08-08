@@ -13,7 +13,7 @@ function clickDelete() {
       document.querySelector('.app_canvas_frame').contentDocument.querySelector('#pager_next_0').click();
       console.info('已尝试自动翻页，若无反应请手动翻页。');
     } catch (error) {
-      console.error('预期外的错误：自动翻页失败。', error);
+      console.error('预期外的错误：尝试自动翻页时出错。', error);
     }
   }
 }
@@ -24,7 +24,7 @@ function clickYes() {
     console.info('已删除', cleanerCount++, '条说说。');
     setTimeout('clickDelete();', CleanerDelay);
   } catch (error) {
-    console.error('预期外的错误。', error);
+    console.error('预期外的错误：尝试点击是按钮时出错。', error);
   }
 }
 
