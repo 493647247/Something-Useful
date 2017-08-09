@@ -1,12 +1,12 @@
 'use strict';
 
 var cleanerCount = 1;
-var CleanerDelay = 1000;
+var cleanerDelay = 1000;
 
 function clickDelete() {
   try {
     document.querySelector('.app_canvas_frame').contentDocument.querySelector('.del_btn').click();
-    setTimeout('clickYes();', CleanerDelay);
+    setTimeout('clickYes();', cleanerDelay);
   } catch (error) {
     console.info('预期内的错误：尝试点击删除按钮时出错，将尝试自动翻页。', error);
     try {
@@ -22,7 +22,7 @@ function clickYes() {
   try {
     document.querySelector('.qz_dialog_layer_sub').click();
     console.info('已删除', cleanerCount++, '条说说。');
-    setTimeout('clickDelete();', CleanerDelay);
+    setTimeout('clickDelete();', cleanerDelay);
   } catch (error) {
     console.error('预期外的错误：尝试点击是按钮时出错。', error);
   }
