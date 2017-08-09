@@ -10,7 +10,7 @@ function clickDelete() {
   } catch (error) {
     console.info('预期内的错误：尝试点击删除按钮时出错，将尝试自动翻页。', error);
     try {
-      document.querySelector('.app_canvas_frame').contentDocument.querySelector('[id|=pager_next_]').click();
+      document.querySelector('.app_canvas_frame').contentDocument.querySelector('[title=下一页]').click();
       console.info('已尝试自动翻页，若无反应请手动翻页。');
       setTimeout('clickDelete();', cleanerDelay);
     } catch (error) {
