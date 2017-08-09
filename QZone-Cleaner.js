@@ -12,6 +12,7 @@ function clickDelete() {
     try {
       document.querySelector('.app_canvas_frame').contentDocument.querySelector('#pager_next_0').click();
       console.info('已尝试自动翻页，若无反应请手动翻页。');
+      setTimeout('clickDelete();', cleanerDelay);
     } catch (error) {
       console.error('预期外的错误：尝试自动翻页时出错。', error);
     }
